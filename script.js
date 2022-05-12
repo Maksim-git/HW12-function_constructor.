@@ -39,10 +39,8 @@ const modifier = {
 function Hamburger(burger) {
   this.selectedBurger = burger;
   this.addModifier = function (selectedModifier) {
-    this.selectedBurger.price =
-      selectedModifier.price + this.selectedBurger.price;
-    this.selectedBurger.calories =
-      selectedModifier.calories + this.selectedBurger.calories;
+    this.selectedBurger.price += selectedModifier.price;
+    this.selectedBurger.calories += selectedModifier.calories;
   };
   this.getPrice = function () {
     return this.selectedBurger.price;
